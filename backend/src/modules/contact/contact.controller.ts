@@ -30,8 +30,8 @@ export class ContactController {
   @Get()
   @UseGuards(JwtAuthGuard)
   @ApiBearerAuth()
-  findAll() {
-    return this.contactService.findAll();
+  findAll(@Request() req) {
+    return this.contactService.findAll(req.user.id);
   }
 
   @Get(':id')

@@ -11,8 +11,8 @@ export class ContactService {
     return await this.contactRepository.create(createContactDto, customerId);
   }
 
-  async findAll() {
-    return await this.contactRepository.findAll();
+  async findAll(customerId: string) {
+    return await this.contactRepository.findAll(customerId);
   }
 
   async findOne(id: string) {
