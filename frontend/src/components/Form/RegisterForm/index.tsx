@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import Input from "../../components/Input";
-import { iRegisterFormValues } from "../../contexts/UserContext/@types";
-import { UserContext } from "../../contexts/UserContext/UserContext";
-import { StyledForm } from "../../styles/form";
-import { StyledButton } from "../../styles/buttons";
+import { iRegisterFormValues } from "../../../contexts/UserContext/@types";
+import { UserContext } from "../../../contexts/UserContext/UserContext";
+import { StyledButton } from "../../../styles/buttons";
+import { StyledForm } from "../../../styles/form";
+import Input from "../../Input";
 
 const RegisterForm = () => {
   const { userRegister } = useContext(UserContext);

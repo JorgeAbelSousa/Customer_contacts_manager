@@ -1,13 +1,21 @@
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import { DashProvider } from "./contexts/DashContext/DashContext";
+import DashBoardPage from "./pages/DashboardPage";
 import LoginPage from "./pages/LoginPage/index";
 import RegisterPage from "./pages/RegisterPage";
-import DashBoardPage from "./pages/DashboardPage";
 
 const Router = () => (
   <Routes>
     <Route path="/" element={<LoginPage />} />
     <Route path="/register" element={<RegisterPage />} />
-    <Route path="/dash" element={<DashBoardPage />} />
+    <Route
+      path="/dash"
+      element={
+        <DashProvider>
+          <DashBoardPage />
+        </DashProvider>
+      }
+    />
   </Routes>
 );
 

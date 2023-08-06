@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import RegisterForm from "../../components/RegisterForm";
+import RegisterForm from "../../components/Form/RegisterForm";
 import { StyledTitle } from "../../styles/typography";
 import { StyledRegisterPage } from "./style";
 
@@ -10,7 +10,7 @@ const RegisterPage = () => {
   useEffect(() => {
     const token = localStorage.getItem("@token");
     if (token) {
-      navigate("/dashboard");
+      navigate("/dash");
     }
   }, []);
 

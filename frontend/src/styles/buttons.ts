@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 interface IStyledButtonProps {
@@ -34,23 +35,23 @@ export const StyledButtonCSS = css<IStyledButtonProps>`
     }
   }}
 
-  ${({ $buttonStyle }) => {
+  ${({ theme, $buttonStyle }) => {
     switch ($buttonStyle) {
       case "purple":
         return css`
-          color: var();
-          background: var();
+          color: ${theme.colors.white};
+          background: ${theme.colors.primary};
           &hover {
             opacity: 0.5;
           }
         `;
       case "gray":
         return css`
-          color: var();
-          background: var();
-          &hover {
-            color: var();
-            background: var();
+          color: ${theme.colors.gray300};
+          background: ${theme.colors.gray100};
+          &:hover {
+            color: ${theme.colors.gray100};
+            background: ${theme.colors.gray300};
           }
         `;
     }
@@ -58,5 +59,9 @@ export const StyledButtonCSS = css<IStyledButtonProps>`
 `;
 
 export const StyledButton = styled.button<IStyledButtonProps>`
+  ${StyledButtonCSS}
+`;
+
+export const StyledButtonLink = styled(Link)`
   ${StyledButtonCSS}
 `;
