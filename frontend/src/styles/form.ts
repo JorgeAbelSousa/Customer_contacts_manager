@@ -4,7 +4,8 @@ import { styled } from "styled-components";
 export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1rem;
+  padding-bottom: 20px;
 `;
 
 export const StyledTextField = styled(TextField)`
@@ -16,14 +17,14 @@ export const StyledTextField = styled(TextField)`
 
   label {
     &.Mui-focused {
-      color: var();
+      color: ${({theme}) => theme.colors.primary};
     }
   }
 
   .Mui-focused {
     fieldset {
-      border-color: var();
-      outline-color: var();
+      border-color: ${({theme}) => theme.colors.primary};
+      outline-color: ${({theme}) => theme.colors.primary};
     }
   }
 `;

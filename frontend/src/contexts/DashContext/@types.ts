@@ -1,7 +1,5 @@
 export interface iDashContext {
   contacts: iContact[];
-  filteredContacts: iContact[];
-  showContacts: (contactsToFilter: iSearchValue) => void;
   modal: boolean;
   handleModal: () => void;
 }

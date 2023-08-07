@@ -20,10 +20,10 @@ export const UserProvider = ({ children }: iDefaultProviderProps) => {
 
   const userRegister = async (formData: iRegisterFormValues) => {
     try {
-      const response = await api.post("/users", formData);
+      const response = await api.post("/customers", formData);
       toast.success("Usuário criado!");
 
-      navigate("/login");
+      navigate("/");
     } catch (error) {
       if (error instanceof AxiosError) {
         toast.error(`${error.response?.data}`);

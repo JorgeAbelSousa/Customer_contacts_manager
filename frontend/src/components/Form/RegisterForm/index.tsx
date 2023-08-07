@@ -45,7 +45,7 @@ const RegisterForm = () => {
         register={register("password")}
       />
       <Input label="Telefone" type="text" register={register("phoneNumber")} />
-      <StyledButton $buttonSize="default" $buttonStyle="gray">
+      <StyledButton $buttonSize="default" $buttonStyle="purple">
         Cadastrar
       </StyledButton>
     </StyledForm>

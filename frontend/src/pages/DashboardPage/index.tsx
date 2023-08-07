@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import { DashContext } from "../../contexts/DashContext/DashContext";
 import { StyledContainer } from "../../styles/container";
 import { StyledDashPage } from "./style";
+import ContactsList from "../../components/ContactsList";
 
 const DashPage = () => {
   const { modal } = useContext(DashContext);
@@ -12,7 +13,8 @@ const DashPage = () => {
       {modal === true ? <ContactModal /> : null}
       <Header />
       <main>
-        <StyledContainer containerWidth={1300}>
+        <StyledContainer containerwidth={1300}>
+          <ContactsList />
         </StyledContainer>
       </main>
     </StyledDashPage>

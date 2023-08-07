@@ -16,7 +16,7 @@ export const StyledButtonCSS = css<IStyledButtonProps>`
   font-weight: 600;
   font-size: 1rem;
 
-  border-radius: 10px;
+  border-radius: 8px;
 
   transition: 0.5s;
 
@@ -26,6 +26,7 @@ export const StyledButtonCSS = css<IStyledButtonProps>`
         return css`
           padding: 0 30px;
           height: 60px;
+          width: 100%;
         `;
       case "medium":
         return css`
@@ -37,14 +38,6 @@ export const StyledButtonCSS = css<IStyledButtonProps>`
 
   ${({ theme, $buttonStyle }) => {
     switch ($buttonStyle) {
-      case "purple":
-        return css`
-          color: ${theme.colors.white};
-          background: ${theme.colors.primary};
-          &hover {
-            opacity: 0.5;
-          }
-        `;
       case "gray":
         return css`
           color: ${theme.colors.gray300};
@@ -52,6 +45,15 @@ export const StyledButtonCSS = css<IStyledButtonProps>`
           &:hover {
             color: ${theme.colors.gray100};
             background: ${theme.colors.gray300};
+          }
+        `;
+      case "purple":
+        return css`
+          color: ${theme.colors.white};
+          background: ${theme.colors.primary};
+          &:hover {
+            color: ${theme.colors.gray600};
+            background: ${theme.colors.secondary};
           }
         `;
     }

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import RegisterForm from "../../components/Form/RegisterForm";
+import { StyledContainer, StyledGridBox } from "../../styles/container";
 import { StyledTitle } from "../../styles/typography";
 import { StyledRegisterPage } from "./style";
 
@@ -16,16 +17,17 @@ const RegisterPage = () => {
 
   return (
     <StyledRegisterPage>
-      <div className="central_content">
-        <header>
-          <StyledTitle tag="h1" $fontSize="three">
-            Cadastro
-          </StyledTitle>
-          <Link to="/login">Já tenho cadastro</Link>
-        </header>
-
-        <RegisterForm />
-      </div>
+      <StyledContainer containerwidth={350}>
+        <StyledGridBox>
+          <header>
+            <StyledTitle tag="h1" $fontSize="three" textAlign="center">
+              Cadastro
+            </StyledTitle>
+            <Link to="/">Já tenho cadastro</Link>
+          </header>
+          <RegisterForm />
+        </StyledGridBox>
+      </StyledContainer>
     </StyledRegisterPage>
   );
 };

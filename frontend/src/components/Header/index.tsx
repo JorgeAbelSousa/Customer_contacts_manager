@@ -8,9 +8,7 @@ const Header = () => {
 
   return (
     <StyledHeader>
-      <div>
-        <h2>CCM</h2>
-      </div>
+      <h2 className="logo">CCM</h2>
       <nav role="navigation">
         <button type="button">
           <MdLogout size={28} onclick={() => userLogout()} />
